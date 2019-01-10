@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-18-188-99-73.us-east-2.compute.amazonaws.com',
+      host: 'ec2-13-59-231-163.us-east-2.compute.amazonaws.com',
       key: '~/.ssh/ankush92.pem',
       ref: 'origin/master',
       repo: 'git@github.com:ankush29/fullStack-setup.git',
