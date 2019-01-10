@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'fullStack-setup',
-    script: './server/index.js'
+    script: './index.js'
   }],
   deploy: {
     production: {
