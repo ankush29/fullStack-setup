@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:ankush29/fullStack-setup.git',
       path: '/home/ubuntu/fullStack-setup',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'NODE_ENV=production npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
