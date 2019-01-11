@@ -4,7 +4,7 @@ const path = require('path');
 
 console.log('process.env.NODE_ENV---',process.env.NODE_ENV);
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' || 1) {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'build')));
   // Handle React routing, return all requests to React app
