@@ -1,5 +1,8 @@
 const express = require('express')
-const app = express()
+const app = express();
+const path = require('path');
+
+console.log('process.env.NODE_ENV---',process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
