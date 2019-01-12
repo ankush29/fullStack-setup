@@ -1,7 +1,19 @@
 const express = require('express')
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api/hello', (req, res) => {
+  res.send({ express: 'Hello From Express' });
+});
+
+app.post('/api/world', (req, res) => {
+  console.log(req.body);
+  res.send('this'+req.body.post);
+});
 
 if (process.env.NODE_ENV !== 'development') {
   console.log('process.env.NODE_ENV---',process.env.NODE_ENV);
