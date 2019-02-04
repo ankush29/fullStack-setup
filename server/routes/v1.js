@@ -18,6 +18,6 @@ router.get('/users',passport.authenticate('jwt', {session:false}), UserControlle
 router.put('/users',passport.authenticate('jwt', {session:false}), UserController.update); //update
 
 router.delete('/users',passport.authenticate('jwt',{session:false}), UserController.remove); //delete
-router.post(    '/users/login',     UserController.login);
+router.post('/users/login',UserController.login);
 
 module.exports = router;

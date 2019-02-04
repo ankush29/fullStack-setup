@@ -33,7 +33,7 @@ if(CONFIG.app==='dev'){
 
 app.use('/', function(req, res){
  res.statusCode = 200;//send the appropriate status code
- res.json({status:"success", message:"Parcel Pending API", data:{}})
+ res.json({status:"success", message:"runnung", data:{}})
 });
 
 // catch 404 and forward to error handler
@@ -54,14 +54,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
-});
-
-app.post('/api/world', (req, res) => {
-  console.log(req.body);
-  res.send('this'+req.body.post);
-});
 
 if (process.env.NODE_ENV !== 'development') {
   console.log('process.env.NODE_ENV---',process.env.NODE_ENV);
